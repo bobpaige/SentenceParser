@@ -14,8 +14,12 @@ import com.bobman.sentenceparser.bo.Molecule;
 public interface MoleculeRepository extends PagingAndSortingRepository<Molecule, Long> {
 
   /**
-   * From https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-six-sorting/
+   * From
+   * https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-part-six-sorting/
+   * 
    * @return
    */
   List<Molecule> findAll(Sort sort);
+
+  Molecule findByText(String startText);
 }

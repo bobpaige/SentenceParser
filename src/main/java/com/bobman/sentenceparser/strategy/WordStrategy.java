@@ -11,7 +11,7 @@ import com.bobman.sentenceparser.bo.Molecule;
  * Parses a sentence into words
  *
  */
-public class WordStrategy extends ParseStrategy {
+public class WordStrategy extends ParseStrategy<InputSentence, List<Molecule>> {
 
   @Override
   List<Molecule> parse(InputSentence input) {

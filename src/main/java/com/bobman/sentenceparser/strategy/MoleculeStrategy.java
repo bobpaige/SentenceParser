@@ -9,7 +9,7 @@ import com.bobman.sentenceparser.bo.Molecule;
  * Parses input into existing Molecules, creating where needed
  *
  */
-public class MoleculeStrategy extends ParseStrategy {
+public class MoleculeStrategy extends ParseStrategy<InputSentence, List<Molecule>> {
 
   @Override
   List<Molecule> parse(InputSentence input) {

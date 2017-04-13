@@ -5,7 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
@@ -15,6 +18,9 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor(force = true)
+@Builder
+@AllArgsConstructor
+@EqualsAndHashCode
 public class Molecule {
 
   /**
@@ -50,6 +56,8 @@ public class Molecule {
    * @return
    */
   public Integer getLength() {
-    return text == null ? 0 : text.length();
+    return text == null
+        ? 0
+        : text.length();
   }
 }
